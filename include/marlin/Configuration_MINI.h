@@ -674,7 +674,7 @@
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 280 } //E0 280 295
 #define DEFAULT_AXIS_STEPS_PER_UNIT \
-    { 100, 100, 400, 325 } //E0 280 295
+    { 100, 100, 400, 690 } //E0 280 295
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 800, 800, 3200, 1120 } //E0 280 295
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 1120 } //E0 280 295
 
@@ -684,7 +684,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
 #define DEFAULT_MAX_FEEDRATE \
-    { 180, 180, 12, 80 }
+    { 180, 180, 12, 120 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -693,7 +693,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
 #define DEFAULT_MAX_ACCELERATION \
-    { 1250, 1250, 400, 4000 }
+    { 1250, 1250, 400, 3000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -729,7 +729,7 @@
     #define DEFAULT_ZJERK 2.0
 #endif
 
-#define DEFAULT_EJERK 10 // May be used by Linear Advance
+#define DEFAULT_EJERK 5 // May be used by Linear Advance
 
 /**
  * S-Curve Acceleration

@@ -1292,10 +1292,10 @@
         #define MIN_AUTORETRACT 0.1 // When auto-retract is on, convert E moves of this length and over
         #define MAX_AUTORETRACT 10.0 // Upper limit for auto-retract conversion
     #endif
-    #define RETRACT_LENGTH 3 // Default retract length (positive mm)
+    #define RETRACT_LENGTH 1.5 // Default retract length (positive mm)
     #define RETRACT_LENGTH_SWAP 13 // Default swap retract length (positive mm), for extruder change
-    #define RETRACT_FEEDRATE 45 // Default feedrate for retracting (mm/s)
-    #define RETRACT_ZRAISE 0 // Default retract Z-raise (mm)
+    #define RETRACT_FEEDRATE 120 // Default feedrate for retracting (mm/s)
+    #define RETRACT_ZRAISE 0.2 // Default retract Z-raise (mm)
     #define RETRACT_RECOVER_LENGTH 0 // Default additional recover length (mm, added to retract length when recovering)
     #define RETRACT_RECOVER_LENGTH_SWAP 0 // Default additional swap recover length (mm, added to retract length when recovering from extruder change)
     #define RETRACT_RECOVER_FEEDRATE 8 // Default feedrate for recovering from retraction (mm/s)
@@ -1363,16 +1363,16 @@
 // This short retract is done immediately, before parking the nozzle.
     #define FILAMENT_CHANGE_UNLOAD_FEEDRATE 80 // (mm/s) Unload filament feedrate. This can be pretty fast.
     #define FILAMENT_CHANGE_UNLOAD_ACCEL 1250 // (mm/s^2) Lower acceleration may allow a faster feedrate.
-    #define FILAMENT_CHANGE_UNLOAD_LENGTH 420 // (mm) The length of filament for a complete unload.
+    #define FILAMENT_CHANGE_UNLOAD_LENGTH 90 // (mm) The length of filament for a complete unload.
 //   For Bowden, the full length of the tube and nozzle.
 //   For direct drive, the full length of the nozzle.
 //   Set to 0 for manual unloading.
     #define FILAMENT_CHANGE_SLOW_LOAD_FEEDRATE 10 // (mm/s) Slow move when starting load.
     #define FILAMENT_CHANGE_SLOW_LOAD_LENGTH 40 // (mm) Slow length, to allow time to insert material.
 // 0 to disable start loading and skip to fast load only
-    #define FILAMENT_CHANGE_FAST_LOAD_FEEDRATE 80 // (mm/s) Load filament feedrate. This can be pretty fast.
+    #define FILAMENT_CHANGE_FAST_LOAD_FEEDRATE 40 // (mm/s) Load filament feedrate. This can be pretty fast.
     #define FILAMENT_CHANGE_FAST_LOAD_ACCEL 625 // (mm/s^2) Lower acceleration may allow a faster feedrate.
-    #define FILAMENT_CHANGE_FAST_LOAD_LENGTH 320 // (mm) Load length of filament, from extruder gear to nozzle.
+    #define FILAMENT_CHANGE_FAST_LOAD_LENGTH 90 // (mm) Load length of filament, from extruder gear to nozzle.
 //   For Bowden, the full length of the tube and nozzle.
 //   For direct drive, the full length of the nozzle.
 //#define ADVANCED_PAUSE_CONTINUOUS_PURGE       // Purge continuously up to the purge length until interrupted.
@@ -1558,7 +1558,7 @@
     #endif
 
     #if AXIS_IS_TMC(E0)
-        #define E0_CURRENT 400 //520
+        #define E0_CURRENT 850 //520
         #define E0_MICROSTEPS 16 //32
         #define E0_RSENSE 0.22
     #endif
@@ -1637,7 +1637,7 @@
    */
     #define STEALTHCHOP_XY
     #define STEALTHCHOP_Z
-//  #define STEALTHCHOP_E
+    //#define STEALTHCHOP_E
 
     /**
    * Optimize spreadCycle chopper parameters by using predefined parameter sets
